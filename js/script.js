@@ -207,7 +207,6 @@ function setup() {
   background(0);
   noCursor();
   input = document.querySelector('input');
-  input.style.display = "none"
 }
 
 
