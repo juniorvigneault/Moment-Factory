@@ -379,6 +379,13 @@ function title() {
     if (timer1) {
       text(`Welcome to the Underworld`, width / 2, 650)
     };
+    setTimeout(() => {
+      timer7 = true;
+    }, 3000)
+    if(timer7){
+      textSize(20);
+    text(`(Click to continue)`, width / 2, 800)
+}
     pop();
 
   }
@@ -579,7 +586,7 @@ function title15() {
   textAlign(CENTER, CENTER);
   textSize(100);
   textStyle(BOLD);
-  text(`I understand Rhythm.`, windowWidth / 2, windowHeight / 2);
+  text(`I understand rhythm.`, windowWidth / 2, windowHeight / 2);
   pop();
 }
 
@@ -714,9 +721,7 @@ function title25() {
   let answer = 'I PROMISE';
   let rightAnswer = false;
   if (input.value.toUpperCase() === answer) {
-    setTimeout(() => {
       input.style.display = "none"
-    }, 100)
     setTimeout(() => {
       timer4 = true;
     }, 1000)
@@ -772,77 +777,6 @@ function title28() {
   pop();
 }
 
-function title29() {
-  push();
-  background(0);
-  starrySky();
-  fadeOut();
-  fill(textColor);
-  noStroke();
-  textAlign(CENTER, CENTER);
-  textSize(50);
-  textStyle(BOLD);
-  text(`There is just one last thing...`, windowWidth / 2, windowHeight / 2);
-  pop();
-}
-
-function title30() {
-  push();
-  background(0);
-  starrySky();
-  fadeIn();
-  fill(fade.fadeIn);
-  textAlign(CENTER, CENTER);
-  noStroke();
-  textSize(50);
-  textStyle(BOLD);
-  text(`One last thing you need to do...`, windowWidth / 2, windowHeight / 2);
-  pop();
-}
-
-function title31() {
-  push();
-  background(0);
-  fill(250);
-  noStroke();
-  textAlign(CENTER, CENTER);
-  textSize(30);
-  textStyle(BOLD);
-  text(`Bring this lost child back to the chain of love using the arrow keys`, windowWidth / 2, 300);
-  pop();
-  lostChild();
-}
-
-// GAME 2 - YOU HAVE TO BRING THE CHILD TO EARTH WITH THE ARROW KEYS
-
-function title32() {
-  background(0);
-  starrySky();
-  push();
-  fadeIn();
-  fill(fade.fadeIn);
-  noStroke();
-  textAlign(CENTER, CENTER);
-  textSize(50);
-  textStyle(BOLD);
-  text(`Good...`, windowWidth / 2, windowHeight / 2);
-  pop();
-}
-
-function title33() {
-  background(0);
-  starrySky();
-  push();
-  fadeOut();
-  fill(fade.fadeIn);
-  noStroke();
-  textAlign(CENTER, CENTER);
-  textSize(50);
-  textStyle(BOLD);
-  text(`Very good...`, windowWidth / 2, windowHeight / 2);
-  pop();
-
-}
 
 function title34() {
   push();
@@ -854,7 +788,7 @@ function title34() {
   textAlign(CENTER, CENTER);
   textSize(50);
   textStyle(BOLD);
-  text(`You are finally ready...`, windowWidth / 2, windowHeight / 2);
+  text(`Finally ready...`, windowWidth / 2, windowHeight / 2);
   pop();
 
 }
@@ -1268,7 +1202,7 @@ function mousePressed() {
     state = 'title27';
     fade.fadeIn = 0;
   } else if (state === 'title27') {
-    state = 'title28';
+    state = 'title34';
     fade.fadeIn = 250;
   } else if (state === 'title28' && timer5 === true) {
     state = 'title29';
