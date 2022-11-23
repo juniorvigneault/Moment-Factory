@@ -197,6 +197,8 @@ let state = 'start';
 
 
 function setup() {
+  let loadInstructions = document.querySelector('#please')
+  loadInstructions.style.display = 'none';
   createCanvas(windowWidth, windowHeight);
   angleMode(DEGREES);
 
@@ -651,7 +653,7 @@ function title20() {
   textSize(50);
   textStyle(BOLD);
   text(`The cyborgs are approaching, I must
-    quickly comunicate the prophecy...`, windowWidth / 2, windowHeight / 2);
+    quickly communicate the prophecy...`, windowWidth / 2, windowHeight / 2);
   pop();
 }
 
